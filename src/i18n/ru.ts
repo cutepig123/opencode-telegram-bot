@@ -13,6 +13,7 @@ export const ru: I18nDictionary = {
   "cmd.description.stop": "Прервать текущее действие",
   "cmd.description.detach": "Отсоединиться от текущей сессии",
   "cmd.description.sessions": "Список сессий",
+  "cmd.description.all_sessions": "Список сессий всех проектов (сначала новые)",
   "cmd.description.messages": "Сообщения текущей сессии",
   "cmd.description.settings": "Изменить настройки бота",
   "cmd.description.projects": "Список проектов",
@@ -195,6 +196,12 @@ export const ru: I18nDictionary = {
   "sessions.project_not_selected":
     "🏗 Проект не выбран.\n\nСначала выберите проект командой /projects.",
   "sessions.empty": "📭 Сессий нет.\n\nСоздайте новую сессию командой /new.",
+  "allsessions.select_page": "Выберите сеанс (все проекты — страница {page} из {total})",
+  "allsessions.empty": "📤 Сессий не найдено",
+  "allsessions.fetch_error": "❌ Не удалось получить список сессий. Попробуйте ещё раз",
+  "allsessions.page_empty_callback": "На этой странице нет сессий",
+  "allsessions.page_load_error_callback": "Не удалось загрузить страницу",
+  "allsessions.open_error": "❌ Не удалось открыть сеанс",
   "sessions.select": "Выберите сессию:",
   "sessions.select_page": "Выберите сессию (страница {page}):",
   "sessions.fetch_error":

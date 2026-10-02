@@ -11,6 +11,7 @@ export const en = {
   "cmd.description.stop": "Stop current action",
   "cmd.description.detach": "Detach from current session",
   "cmd.description.sessions": "List sessions",
+  "cmd.description.all_sessions": "List sessions of all projects (newest first)",
   "cmd.description.messages": "Browse session messages",
   "cmd.description.settings": "Change bot settings",
   "cmd.description.projects": "List projects",
@@ -195,6 +196,12 @@ export const en = {
   "sessions.project_not_selected":
     "🏗 Project is not selected.\n\nFirst select a project with /projects.",
   "sessions.empty": "📭 No sessions found.\n\nCreate a new session with /new.",
+  "allsessions.select_page": "Select session (all projects - page {page} of {total})",
+  "allsessions.empty": "📤 No sessions found",
+  "allsessions.fetch_error": "❌ Failed to fetch the session list. Try again",
+  "allsessions.page_empty_callback": "This page has no sessions",
+  "allsessions.page_load_error_callback": "Failed to load page",
+  "allsessions.open_error": "❌ Failed to open session",
   "sessions.select": "Select a session:",
   "sessions.select_page": "Select a session (page {page}):",
   "sessions.fetch_error":

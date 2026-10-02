@@ -13,6 +13,7 @@ export const tr: I18nDictionary = {
   "cmd.description.stop": "Geçerli işlemi durdur",
   "cmd.description.detach": "Geçerli oturumdan ayrıl",
   "cmd.description.sessions": "Oturumları listele",
+  "cmd.description.all_sessions": "Tüm projelerin oturumlarını listele (en yeni önce)",
   "cmd.description.messages": "Oturum mesajlarına göz at",
   "cmd.description.settings": "Bot ayarlarını değiştir",
   "cmd.description.projects": "Projeleri listele",
@@ -197,6 +198,12 @@ export const tr: I18nDictionary = {
 
   "sessions.project_not_selected": "🏗 Proje seçilmedi.\n\nÖnce /projects ile bir proje seçin.",
   "sessions.empty": "📭 Oturum bulunamadı.\n\n/new ile yeni bir oturum oluşturun.",
+  "allsessions.select_page": "Oturum seç (tüm projeler - {total} sayfanın {page}. sayfası)",
+  "allsessions.empty": "📤 Oturum bulunamadı",
+  "allsessions.fetch_error": "❌ Oturum listesi alınamadı. Tekrar deneyin",
+  "allsessions.page_empty_callback": "Bu sayfada oturum yok",
+  "allsessions.page_load_error_callback": "Sayfa yüklenemedi",
+  "allsessions.open_error": "❌ Oturum açılamadı",
   "sessions.select": "Bir oturum seçin:",
   "sessions.select_page": "Bir oturum seçin (sayfa {page}):",
   "sessions.fetch_error":

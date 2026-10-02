@@ -20,6 +20,7 @@ export const ko: I18nDictionary = {
   "cmd.description.stop": "현재 작업 중지",
   "cmd.description.detach": "현재 세션에서 분리",
   "cmd.description.sessions": "세션 목록 보기",
+  "cmd.description.all_sessions": "모두 플레즈의 시스 모륵 (최신순)",
   "cmd.description.messages": "세션 메시지 탐색",
   "cmd.description.settings": "봇 설정 변경",
   "cmd.description.projects": "프로젝트 목록 보기",
@@ -204,6 +205,12 @@ export const ko: I18nDictionary = {
   "sessions.project_not_selected":
     "🏗 프로젝트가 선택되지 않았습니다.\n\n먼저 /projects로 프로젝트를 선택해 주세요.",
   "sessions.empty": "📭 세션이 없습니다.\n\n/new로 새 세션을 만들어 주세요.",
+  "allsessions.select_page": "시스 아이보대 검삸(모두 플레즈 - {total}과 단의 {page}번째 페이지)",
+  "allsessions.empty": "📤 시스이 없습니다",
+  "allsessions.fetch_error": "❌ 시스 모륵을 가즈도 못 했습니다. ₉이 시도해 제추",
+  "allsessions.page_empty_callback": "이 페이지에 시스가 없습니다",
+  "allsessions.page_load_error_callback": "페이지를 래려오지 못 했습니다",
+  "allsessions.open_error": "❌ 시스를 열 수 없습니다",
   "sessions.select": "세션을 선택하세요:",
   "sessions.select_page": "세션을 선택하세요 ({page} 페이지):",
   "sessions.fetch_error":

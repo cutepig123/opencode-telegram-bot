@@ -10,6 +10,7 @@ import { worktreeCommand } from "../commands/worktree-command.js";
 import { openCommand } from "../commands/open-command.js";
 import { lsCommand } from "../commands/ls-command.js";
 import { sessionsCommand } from "../commands/sessions-command.js";
+import { allSessionsCommand } from "../commands/all-sessions-command.js";
 import { recentCommand } from "../commands/recent-command.js";
 import { messagesCommand } from "../commands/messages-command.js";
 import { newCommand } from "../commands/new-command.js";
@@ -99,6 +100,7 @@ export function registerCommandRouter(bot: Bot<Context>, deps: CommandRouterDeps
   bot.command("open", (ctx) => openCommand(ctx, container));
   bot.command("ls", (ctx) => lsCommand(ctx, container));
   bot.command("sessions", (ctx) => sessionsCommand(ctx, container));
+  bot.command("allsessions", (ctx) => allSessionsCommand(ctx, container));
   bot.command("recent", (ctx) => recentCommand(ctx, container));
   bot.command("messages", (ctx) => messagesCommand(ctx, container));
   bot.command("new", (ctx) => newCommand(ctx, botDeps));

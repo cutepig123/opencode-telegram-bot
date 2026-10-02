@@ -13,6 +13,7 @@ export const es: I18nDictionary = {
   "cmd.description.stop": "Detener la acción actual",
   "cmd.description.detach": "Desconectar de la sesión actual",
   "cmd.description.sessions": "Listar sesiones",
+  "cmd.description.all_sessions": "Listar sesiones de todos los proyectos (las más recientes primero)",
   "cmd.description.messages": "Ver mensajes de la sesión",
   "cmd.description.settings": "Cambiar ajustes del bot",
   "cmd.description.projects": "Listar proyectos",
@@ -204,6 +205,12 @@ export const es: I18nDictionary = {
   "sessions.project_not_selected":
     "🏗 No hay un proyecto seleccionado.\n\nPrimero selecciona un proyecto con /projects.",
   "sessions.empty": "📭 No se encontraron sesiones.\n\nCrea una sesión nueva con /new.",
+  "allsessions.select_page": "Seleccionar sesión (todos los proyectos - página {page} de {total})",
+  "allsessions.empty": "📤 No se encontraron sesiones",
+  "allsessions.fetch_error": "❌ No se pudo obtener la lista de sesiones. Inténtalo de nuevo",
+  "allsessions.page_empty_callback": "Esta página no tiene sesiones",
+  "allsessions.page_load_error_callback": "No se pudo cargar la página",
+  "allsessions.open_error": "❌ No se pudo abrir la sesión",
   "sessions.select": "Selecciona una sesión:",
   "sessions.select_page": "Selecciona una sesión (página {page}):",
   "sessions.fetch_error":

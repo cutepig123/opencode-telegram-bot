@@ -82,7 +82,7 @@ describe("staleUpdateMiddleware", () => {
   });
 
   it("passes through a message exactly at the age threshold", async () => {
-    const ctx = createMessageContext(60);
+    const ctx = createMessageContext(900);
     const next: NextFunction = vi.fn().mockResolvedValue(undefined);
 
     await staleUpdateMiddleware(ctx, next);
@@ -92,7 +92,7 @@ describe("staleUpdateMiddleware", () => {
   });
 
   it("drops a message just past the age threshold and logs a warning", async () => {
-    const ctx = createMessageContext(61);
+    const ctx = createMessageContext(901);
     const next: NextFunction = vi.fn().mockResolvedValue(undefined);
 
     await staleUpdateMiddleware(ctx, next);
@@ -135,8 +135,8 @@ describe("staleUpdateMiddleware", () => {
     const sendMessage = vi.fn().mockResolvedValue({ message_id: 1 });
     const next: NextFunction = vi.fn().mockResolvedValue(undefined);
 
-    await staleUpdateMiddleware(createMessageContext(61, { sendMessage }), next);
-    await staleUpdateMiddleware(createMessageContext(90, { sendMessage }), next);
+    await staleUpdateMiddleware(createMessageContext(901, { sendMessage }), next);
+    await staleUpdateMiddleware(createMessageContext(990, { sendMessage }), next);
 
     expect(next).not.toHaveBeenCalled();
     expect(sendMessage).toHaveBeenCalledTimes(1);
@@ -149,8 +149,8 @@ describe("staleUpdateMiddleware", () => {
       .mockResolvedValue({ message_id: 1 });
     const next: NextFunction = vi.fn().mockResolvedValue(undefined);
 
-    await staleUpdateMiddleware(createMessageContext(61, { sendMessage }), next);
-    await staleUpdateMiddleware(createMessageContext(62, { sendMessage }), next);
+    await staleUpdateMiddleware(createMessageContext(901, { sendMessage }), next);
+    await staleUpdateMiddleware(createMessageContext(902, { sendMessage }), next);
 
     expect(sendMessage).toHaveBeenCalledTimes(2);
   });
@@ -159,9 +159,9 @@ describe("staleUpdateMiddleware", () => {
     const sendMessage = vi.fn().mockResolvedValue({ message_id: 1 });
     const next: NextFunction = vi.fn().mockResolvedValue(undefined);
 
-    await staleUpdateMiddleware(createMessageContext(61, { sendMessage }), next);
+    await staleUpdateMiddleware(createMessageContext(901, { sendMessage }), next);
     vi.setSystemTime(NOW_MS + 61_000);
-    await staleUpdateMiddleware(createMessageContext(61, { sendMessage }), next);
+    await staleUpdateMiddleware(createMessageContext(901, { sendMessage }), next);
 
     expect(sendMessage).toHaveBeenCalledTimes(2);
   });

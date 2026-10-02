@@ -3,6 +3,7 @@ import type { AppContainer } from "../../app/bootstrap/app-container.js";
 import type { InteractionErrorScope } from "../../app/managers/interaction-manager.js";
 import { t } from "../../i18n/index.js";
 import { logger } from "../../utils/logger.js";
+import { handleAllSessionsCallback } from "./all-sessions-callback-handler.js";
 import { handleAgentSelect } from "./agent-selection-callback-handler.js";
 import { handleCommandsCallback } from "./command-catalog-callback-handler.js";
 import { handleCompactConfirm, handleCompactDetails } from "./context-control-callback-handler.js";
@@ -74,6 +75,14 @@ export function registerCallbackRouter(bot: Bot<Context>, deps: CallbackRouterDe
       {
         name: "attach",
         handlers: [(ctx) => handlePromptAttachmentCancel(ctx, container)],
+        errorScope: "interaction",
+      },
+    ],
+    [
+      "allsessions",
+      {
+        name: "allsessions",
+        handlers: [(ctx) => handleAllSessionsCallback(ctx, botDeps)],
         errorScope: "interaction",
       },
     ],

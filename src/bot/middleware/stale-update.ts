@@ -7,7 +7,7 @@ import { logger } from "../../utils/logger.js";
 // the bot long after it was sent - after a restart, or after long polling was
 // interrupted by a network outage. Acting on such a message is unwanted: it
 // would start tasks the user no longer expects to run.
-const MAX_MESSAGE_AGE_SECONDS = 60;
+const MAX_MESSAGE_AGE_SECONDS = 900;
 
 export async function staleUpdateMiddleware(ctx: Context, next: NextFunction): Promise<void> {
   // Only `ctx.message` carries the time the user acted. `ctx.msg` also resolves

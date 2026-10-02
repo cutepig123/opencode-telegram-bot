@@ -51,7 +51,7 @@ export type SessionSelectDeps = Pick<
 };
 
 interface SelectSessionByIdOptions {
-  source: "menu" | "background_notification";
+  source: "menu" | "background_notification" | "all_sessions_menu";
   deleteCallbackMessage: boolean;
   removeCallbackReplyMarkup: boolean;
   postSelectAction: "preview" | "latest_assistant_response" | "none";
