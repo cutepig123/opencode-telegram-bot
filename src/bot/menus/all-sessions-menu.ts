@@ -236,7 +236,7 @@ export function buildAllSessionsMenuView(
   }
 
   if (pageData.hasNext) {
-    keyboard.text(t("sessions.button.next_page"), `${ALL_SESSIONS_PAGE_CALLBACK_PREFIX}${pageData.page}`);
+    keyboard.text(t("sessions.button.next_page"), `${ALL_SESSIONS_PAGE_CALLBACK_PREFIX}${pageData.page + 1}`);
   }
 
   if (pageData.page > 0 || pageData.hasNext) {
